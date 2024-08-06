@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CadastroEstilo.css">
+    <title>Cadastro de Estatísticas de Batalhas</title>
+</head>
+<body>
+    <h1>Cadastro de Estatísticas de Batalhas</h1>
+    <form action="estatisticas_batalhas.php" method="POST">
+        <div class="InputBox">
+            <input type="number" name="usuario_id" id="usuario_id" required="required">
+            <span>ID do Usuário</span>
+        </div>
+        <div class="InputBox">
+            <input type="number" name="vitorias" id="vitorias" required="required">
+            <span>Vitórias</span>
+        </div>
+        <div class="InputBox">
+            <input type="number" name="derrotas" id="derrotas" required="required">
+            <span>Derrotas</span>
+        </div>
+        <div class="cadastro-container">
+            <button type="submit" class="cadastro"><span>CADASTRAR</span></button>
+        </div>
+    </form>
+</body>
+</html>

@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800;900&display=swap');
+
+/* Estilos globais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Estilo da logo */
+.logo1 img {
+    width: 200px;
+    height: 200px;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 20px;
+    padding: 5px;
+}
+
+/* Estilo do corpo da página */
+body {
+    background-image: url(../img5.PNG);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+    gap: 30px;
+}
+
+/* Estilo das caixas de texto */
+.InputBox {
+    position: relative;
+    width: 250px;
+}
+
+.InputBox input {
+    color: white;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    background: #1d2b3a;
+    border-radius: 5px;
+    outline: none;
+    font-size: 1em;
+    transition: 0.5s;
+}
+
+.InputBox span {
+    position: absolute;
+    left: 0;
+    padding: 10px;
+    pointer-events: none;
+    font-size: 1em;
+    color: rgba(255, 255, 255, 0.25);
+    text-transform: uppercase;
+    transition: 0.7s;
+}
+
+.InputBox input:valid ~ span,
+.InputBox input:focus ~ span {
+    color: white;
+    transform: translateX(10px) translateY(-7px);
+    font-size: 0.65em;
+    padding: 0 10px;
+    background: #1d2b3a;
+    border-left: 1px solid white;
+    border-right: 1px solid white;
+    letter-spacing: 0.2em;
+}
+
+.InputBox input:valid,
+.InputBox input:focus {
+    border: 1px solid #1d2b3a;
+    box-shadow: 0 0 5px;
+}
+
+/* Estilo do botão de cadastro */
+.cadastro {
+    position: relative;
+    display: inline-block;
+    padding: 10px 20px;
+    background: rgb(160, 153, 153, 0.20);
+    color: white; /* Mudança aqui para garantir que o texto seja visível */
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1em;
+    letter-spacing: 0.1em;
+    font-weight: 400;
+    transition: 0.5s;
+    overflow: hidden;
+    border: none; /* Adicionando borda removida para melhorar a estética */
+    cursor: pointer; /* Mudança aqui para garantir que o cursor mude ao passar sobre o botão */
+}
+
+.cadastro:hover {
+    background: white;
+    color: #1d2b3a;
+    letter-spacing: 0.25em;
+    box-shadow: 0 0 10px white;
+}
+
+.cadastro span {
+    position: relative;
+    z-index: 1;
+}
+
+/* Texto em movimento "Saga Do Conhecimento" */
+.LineOfText {
+    border-right: 2px solid rgba(255, 255, 255, 0.75);
+    color: white;
+    text-transform: uppercase;
+    font-size: 2em;
+    text-shadow: 0 0 3px;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+/* Animação do texto em movimento "Saga Do Conhecimento" */
+.typing-animation {
+    animation: blinkCursor 500ms steps(60) infinite normal, typing 4s steps(60) 2s normal both;
+}
+
+@keyframes blinkCursor {
+    from {
+        border-right-color: rgba(255, 255, 255, 0.75);
+    }
+    to {
+        border-right-color: transparent;
+    }
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 13.8em;
+    }
+}
